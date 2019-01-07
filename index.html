@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <form action="" class="main-form">
+        <input type="text" class="main-form__text" placeholder="Введите текст">
+        <input type="text" class="main-form__text" placeholder="Введите текст">
 
+        <label class="main-form__label"><input type="checkbox" name="check1" value="1883" class="main-form__checkbox"
+                id="xjt-checkbox" onchange="xjtonchange()" checked>Отметить</label>
+        <label class="main-form__label main-form__label_r"><input type="radio" name="radio1" value="5" class="main-form__checkbox"
+                id="xjt-radio" onchange="xjtradio_onchange()" checked>Вариант1</label>
+        <label class="main-form__label main-form__label_r"><input type="radio" name="radio1" value="55" class="main-form__checkbox"
+                id="xjt-radio" onchange="xjtradio_onchange()" checked>Вариант2</label>
+        <label class="main-form__label main-form__label_r"><input type="radio" name="radio1" value="555" class="main-form__checkbox"
+                id="xjt-radio" onchange="xjtradio_onchange()" checked>Вариант3</label>
+        <button class="main-form__submit">Отправить</button>
+    </form>
+    <div class="div-output" id="div-output"></div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

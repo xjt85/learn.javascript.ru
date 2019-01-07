@@ -1,0 +1,64 @@
+html {
+    color: #fff;
+}
+
+body {
+    font-size: 16px;
+    color: #333;
+    font-family: Roboto, sans-serif;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 960px;
+    background-color: #777;
+}
+
+.main-form {
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+    background-color: #ddd;
+    box-shadow: 1px 1px 10px #555;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 40px;
+    &__text {
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background: #eee;
+        display: block;
+        width: calc(100% - 20px);
+        margin-bottom: 20px;
+    }
+    &__submit {
+        display: inline-block;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 20px;
+        background-color:rgb(223, 209, 12);
+        margin-top: 20px;
+    }
+    &__label {
+        display: inline-block;
+        width: calc(100% - 20px);
+        margin: 0;
+        padding: 10px 0;
+        cursor: pointer;
+        &:hover {
+            background-color: rgb(183, 202, 253);
+        }
+        &_r {
+            display: block;
+        }
+    }
+}
+
+.div-output {
+    background-color: rgb(158, 203, 209);
+    min-height: 200px;
+    padding: 20px;
+}
