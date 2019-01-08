@@ -6,66 +6,94 @@ body {
   font-size: 16px;
   color: #333;
   font-family: Roboto, sans-serif;
-  padding: 20px;
   margin: 0 auto;
-  max-width: 960px;
-  background-color: #777;
 }
 
-.main-form {
+.page-wrapper {
+  background-color: #f4ffd6;
   margin: 0 auto;
-  text-align: center;
   padding: 20px;
-  max-width: 300px;
-  background-color: #ddd;
-  -webkit-box-shadow: 1px 1px 10px #555;
-          box-shadow: 1px 1px 10px #555;
-  border-radius: 5px;
-  border: none;
-  font-size: 16px;
+  max-width: 960px;
+  min-height: 600px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #91e0f8;
   margin-bottom: 40px;
 }
 
-.main-form__text {
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background: #eee;
+.menu li a {
   display: block;
-  width: calc(100% - 20px);
-  margin-bottom: 20px;
-}
-
-.main-form__submit {
-  display: inline-block;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 20px;
-  background-color: #dfd10c;
-  margin-top: 20px;
-}
-
-.main-form__label {
-  display: inline-block;
-  width: calc(100% - 20px);
-  margin: 0;
-  padding: 10px 0;
   cursor: pointer;
+  padding: 8px 40px;
+  background-color: #91e0f8;
+  color: #666;
+  text-decoration: none;
 }
 
-.main-form__label:hover {
-  background-color: #b7cafd;
+.menu li a:hover {
+  background-color: #b3e9fa;
 }
 
-.main-form__label_r {
-  display: block;
+.menu-item {
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  list-style: none;
+  text-align: center;
 }
 
-.div-output {
-  background-color: #9ecbd1;
-  min-height: 200px;
+.sub-menu {
+  white-space: nowrap;
+  position: absolute;
+  top: 100%;
+  left: -40px;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  list-style: none;
+}
+
+.tab {
+  display: inline-block;
   padding: 20px;
+  background-color: #ddd;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.tab:hover {
+  background-color: #a3a3a3;
+}
+
+.tab.whiteborder {
+  border: 1px solid #ccc;
+}
+
+.tabcontent {
+  width: calc(100% - 40px);
+  background-color: #ddd;
+  padding: 20px;
+}
+
+.tabcontent.hide {
+  display: none;
+}
+
+.tabcontent.show {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

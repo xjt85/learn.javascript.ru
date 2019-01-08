@@ -6,59 +6,99 @@ body {
     font-size: 16px;
     color: #333;
     font-family: Roboto, sans-serif;
-    padding: 20px;
     margin: 0 auto;
+}
+
+.page-wrapper {
+    background-color: rgb(244, 255, 214);
+    margin: 0 auto;
+    padding: 20px;
+    // display: flex;
+    // justify-content: center;
     max-width: 960px;
-    background-color: #777;
+    min-height: 600px;
 }
 
-.main-form {
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-    max-width: 300px;
-    background-color: #ddd;
-    box-shadow: 1px 1px 10px #555;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
+.menu {
+    display: flex;
+    // justify-content: space-between;
+    width: 100%;
+    // display: flex;
+    // justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: rgb(145, 224, 248);
     margin-bottom: 40px;
-    &__text {
-        font-size: 16px;
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-        background: #eee;
-        display: block;
-        width: calc(100% - 20px);
-        margin-bottom: 20px;
-    }
-    &__submit {
-        display: inline-block;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 8px;
-        font-size: 20px;
-        background-color:rgb(223, 209, 12);
-        margin-top: 20px;
-    }
-    &__label {
-        display: inline-block;
-        width: calc(100% - 20px);
-        margin: 0;
-        padding: 10px 0;
-        cursor: pointer;
-        &:hover {
-            background-color: rgb(183, 202, 253);
-        }
-        &_r {
+
+    li {
+        a {
             display: block;
+            cursor: pointer;
+            padding: 8px 40px;
+            background-color: rgb(145, 224, 248);
+            color: #666;
+            text-decoration: none;
+
+            &:hover {
+                background-color: lighten(rgb(145, 224, 248), 7%);
+            }
         }
+
     }
 }
 
-.div-output {
-    background-color: rgb(158, 203, 209);
-    min-height: 200px;
+.menu-item {
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+
+.sub-menu {
+    white-space: nowrap;
+    position: absolute;
+    top: 100%;
+    left: -40px;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    list-style: none;
+}
+
+//---------------------------ТАБЫ-----------------------------------
+
+.tab {
+    display: inline-block;
     padding: 20px;
+    background-color: #ddd;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &:hover {
+        background-color: rgb(163, 163, 163);
+    }
+    &.whiteborder {
+        border: 1px solid #ccc;
+    }
+}
+
+.tabcontent {
+    width: calc(100% - 40px);
+    background-color: #ddd;
+    padding: 20px;
+
+    &.hide {
+        display: none;
+    }
+
+    &.show {
+        display: block;
+    }
+
 }
