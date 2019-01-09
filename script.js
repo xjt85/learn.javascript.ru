@@ -69,3 +69,26 @@ function showTabsContent(b) {
         tabContent[b].classList.remove('hide');
     }
 }
+
+//--------------------МОДАЛЬНОЕ ОКНО-------------------------------------
+
+var modal = document.getElementById('mymodal');
+var btn = document.getElementById('mybtn');
+var span = document.getElementsByClassName('close')[0];
+
+//при клике на btn - отображаем модальное окно
+btn.onclick = function() {
+    modal.style.display = 'block';
+}
+
+//при клике на кнопку close - открываем модальное окно
+span.onclick = function() {
+    modal.style.display = 'none';
+}
+
+//при клике на окно браузера мимо контента модалки - закрываем модальное окно
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}

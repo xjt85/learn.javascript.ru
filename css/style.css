@@ -17,11 +17,14 @@ body {
   min-height: 600px;
 }
 
-.first, .second {
+.first,
+.second {
   padding: 20px;
 }
 
 .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin: 0;
@@ -62,6 +65,7 @@ body {
   overflow: hidden;
   height: 0;
   opacity: 0;
+  -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
   list-style: none;
 }
@@ -72,7 +76,8 @@ body {
   background-color: #ddd;
   border-radius: 10px 10px 0 0;
   cursor: pointer;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .tab:hover {
@@ -86,6 +91,9 @@ body {
 
 .tabcontent {
   width: calc(100% - 40px);
+  height: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   background-color: #ddd;
   padding: 20px;
   border-radius: 0 0 5px 5px;
@@ -103,9 +111,58 @@ button {
   border: none;
   color: #ffffff;
   font-size: 18px;
-  border-radius: 3px;
+  border-radius: 10px;
   background-color: #207e9b;
   padding: 10px 20px;
   margin-bottom: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #248fb0;
+}
+
+button:active {
+  background-color: #1c6d86;
+  outline: none;
+}
+
+.modal {
+  display: block;
+  position: relative;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content {
+  max-width: 40%;
+  max-height: 70%;
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  -webkit-box-shadow: 0 0 20px #000;
+          box-shadow: 0 0 20px #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.close {
+  display: block;
+  position: absolute;
+  padding: 5px 7px;
+  font-size: 30px;
+  background-color: #fff;
+  border-radius: 14px;
+  line-height: 1em;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

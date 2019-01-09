@@ -19,7 +19,8 @@ body {
     min-height: 600px;
 }
 
-.first, .second {
+.first,
+.second {
     padding: 20px;
 }
 
@@ -87,6 +88,7 @@ body {
     &:hover {
         background-color: rgb(163, 163, 163);
     }
+
     &.whiteborder {
         border: 1px solid #ccc;
         border-bottom: none;
@@ -94,7 +96,11 @@ body {
 }
 
 .tabcontent {
+    // display: block;
     width: calc(100% - 40px);
+    height: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     background-color: #ddd;
     padding: 20px;
     border-radius: 0 0 5px 5px;
@@ -114,8 +120,58 @@ button {
     color: #ffffff;
     font-size: 18px;
     // font-weight: bold;
-    border-radius: 3px;
+    border-radius: 10px;
     background-color: rgb(32, 126, 155);
     padding: 10px 20px;
     margin-bottom: 20px;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        background-color: lighten(rgb(32, 126, 155), 5%);
+    }
+
+    &:active {
+        background-color: darken(rgb(32, 126, 155), 5%);
+        outline: none;
+    }
+}
+
+
+.modal {
+    display: block;
+    position: relative;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    &__content {
+        max-width: 40%;
+        max-height: 70%;
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        // border: 1px solid rgb(187, 187, 187);
+        box-shadow: 0 0 20px #000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.close {
+    display: block;
+    position: absolute;
+    padding: 5px 7px;
+    font-size: 30px;
+    background-color: #fff;
+    border-radius: 14px;
+    line-height: 1em;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
 }
