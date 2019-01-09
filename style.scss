@@ -12,11 +12,15 @@ body {
 .page-wrapper {
     background-color: rgb(244, 255, 214);
     margin: 0 auto;
-    padding: 20px;
+    padding: 0px;
     // display: flex;
     // justify-content: center;
     max-width: 960px;
     min-height: 600px;
+}
+
+.first, .second {
+    padding: 20px;
 }
 
 .menu {
@@ -85,6 +89,7 @@ body {
     }
     &.whiteborder {
         border: 1px solid #ccc;
+        border-bottom: none;
     }
 }
 
@@ -92,6 +97,7 @@ body {
     width: calc(100% - 40px);
     background-color: #ddd;
     padding: 20px;
+    border-radius: 0 0 5px 5px;
 
     &.hide {
         display: none;
@@ -101,4 +107,15 @@ body {
         display: block;
     }
 
+}
+
+button {
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    // font-weight: bold;
+    border-radius: 3px;
+    background-color: rgb(32, 126, 155);
+    padding: 10px 20px;
+    margin-bottom: 20px;
 }

@@ -65,7 +65,7 @@ function showTabsContent(b) {
     if (tabContent[b].classList.contains('hide')) {
         hideTabsContent(0);
         tab[b].classList.add('whiteborder');
-        tab[b].classList.add('show');
+        tabContent[b].classList.add('show');
         tabContent[b].classList.remove('hide');
     }
 }

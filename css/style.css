@@ -12,14 +12,16 @@ body {
 .page-wrapper {
   background-color: #f4ffd6;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0px;
   max-width: 960px;
   min-height: 600px;
 }
 
+.first, .second {
+  padding: 20px;
+}
+
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin: 0;
@@ -60,7 +62,6 @@ body {
   overflow: hidden;
   height: 0;
   opacity: 0;
-  -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
   list-style: none;
 }
@@ -71,8 +72,7 @@ body {
   background-color: #ddd;
   border-radius: 10px 10px 0 0;
   cursor: pointer;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .tab:hover {
@@ -81,12 +81,14 @@ body {
 
 .tab.whiteborder {
   border: 1px solid #ccc;
+  border-bottom: none;
 }
 
 .tabcontent {
   width: calc(100% - 40px);
   background-color: #ddd;
   padding: 20px;
+  border-radius: 0 0 5px 5px;
 }
 
 .tabcontent.hide {
@@ -95,5 +97,15 @@ body {
 
 .tabcontent.show {
   display: block;
+}
+
+button {
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 3px;
+  background-color: #207e9b;
+  padding: 10px 20px;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=style.css.map */
