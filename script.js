@@ -97,6 +97,6 @@ var abtn = document.getElementById('anim_button');
 
 abtn.onclick = function () {
     var move = document.getElementsByClassName('move')[0];
-    move.style.top = '100%';
-    move.style.left = '100%';
+    move.style.top = 250 +'px';
+    move.style.left = 250 +'px';
 }

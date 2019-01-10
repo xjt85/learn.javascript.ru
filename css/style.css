@@ -23,6 +23,8 @@ body {
 }
 
 .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin: 0;
@@ -63,6 +65,7 @@ body {
   overflow: hidden;
   height: 0;
   opacity: 0;
+  -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
   list-style: none;
 }
@@ -73,7 +76,8 @@ body {
   background-color: #ddd;
   border-radius: 10px 10px 0 0;
   cursor: pointer;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .tab:hover {
@@ -143,13 +147,14 @@ button:active {
   background-color: #fff;
   margin: 15% auto;
   padding: 20px;
-  box-shadow: 0 0 20px #000;
+  -webkit-box-shadow: 0 0 20px #000;
+          box-shadow: 0 0 20px #000;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .close {
-  display: block;
+  display: inline-block;
   position: absolute;
   padding: 5px 7px;
   font-size: 30px;
@@ -162,10 +167,21 @@ button:active {
 }
 
 .third {
+  border-top: 1px solid #417b8d;
+  border-bottom: 1px solid #417b8d;
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .wrapper {
+  display: inline-block;
   position: relative;
   width: 300px;
   height: 300px;
@@ -176,9 +192,10 @@ button:active {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #417b8d;
+  background-color: red;
   width: 50px;
   height: 50px;
+  -webkit-transition: all 2s ease-in;
   transition: all 2s ease-in;
 }
 /*# sourceMappingURL=style.css.map */
