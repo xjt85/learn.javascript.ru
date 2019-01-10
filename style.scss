@@ -1,3 +1,5 @@
+$accent-blue: rgb(65, 123, 141);
+
 html {
     color: #fff;
 }
@@ -33,20 +35,20 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    background-color: rgb(145, 224, 248);
+    background-color: $accent-blue;
     margin-bottom: 40px;
-
+    
     li {
         a {
             display: block;
             cursor: pointer;
             padding: 8px 40px;
-            background-color: rgb(145, 224, 248);
-            color: #666;
+            background-color: $accent-blue;
+            color: #fff;
             text-decoration: none;
 
             &:hover {
-                background-color: lighten(rgb(145, 224, 248), 7%);
+                background-color: lighten($accent-blue, 7%);
             }
         }
 
@@ -86,7 +88,7 @@ body {
     box-sizing: border-box;
 
     &:hover {
-        background-color: rgb(163, 163, 163);
+        background-color: $accent-blue;
     }
 
     &.whiteborder {
@@ -121,25 +123,25 @@ button {
     font-size: 18px;
     // font-weight: bold;
     border-radius: 10px;
-    background-color: rgb(32, 126, 155);
+    background-color: $accent-blue;
     padding: 10px 20px;
     margin-bottom: 20px;
     cursor: pointer;
     outline: none;
 
     &:hover {
-        background-color: lighten(rgb(32, 126, 155), 5%);
+        background-color: lighten($accent-blue, 5%);
     }
 
     &:active {
-        background-color: darken(rgb(32, 126, 155), 5%);
+        background-color: darken($accent-blue, 5%);
         outline: none;
     }
 }
 
 
 .modal {
-    display: block;
+    display: none;
     position: relative;
     position: fixed;
     z-index: 1;
@@ -149,7 +151,7 @@ button {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
-    
+
     &__content {
         max-width: 40%;
         max-height: 70%;
@@ -174,4 +176,25 @@ button {
     top: 50px;
     right: 50px;
     cursor: pointer;
+}
+
+.third {
+    padding: 20px;
+}
+
+.wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: lighten($accent-blue, 10%);
+}
+
+.move {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $accent-blue;
+    width: 50px;
+    height: 50px;
+    transition: all 2s ease-in; 
 }

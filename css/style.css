@@ -23,14 +23,12 @@ body {
 }
 
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: #91e0f8;
+  background-color: #417b8d;
   margin-bottom: 40px;
 }
 
@@ -38,13 +36,13 @@ body {
   display: block;
   cursor: pointer;
   padding: 8px 40px;
-  background-color: #91e0f8;
-  color: #666;
+  background-color: #417b8d;
+  color: #fff;
   text-decoration: none;
 }
 
 .menu li a:hover {
-  background-color: #b3e9fa;
+  background-color: #4c90a5;
 }
 
 .menu-item {
@@ -65,7 +63,6 @@ body {
   overflow: hidden;
   height: 0;
   opacity: 0;
-  -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
   list-style: none;
 }
@@ -76,12 +73,11 @@ body {
   background-color: #ddd;
   border-radius: 10px 10px 0 0;
   cursor: pointer;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .tab:hover {
-  background-color: #a3a3a3;
+  background-color: #417b8d;
 }
 
 .tab.whiteborder {
@@ -112,7 +108,7 @@ button {
   color: #ffffff;
   font-size: 18px;
   border-radius: 10px;
-  background-color: #207e9b;
+  background-color: #417b8d;
   padding: 10px 20px;
   margin-bottom: 20px;
   cursor: pointer;
@@ -120,16 +116,16 @@ button {
 }
 
 button:hover {
-  background-color: #248fb0;
+  background-color: #498a9e;
 }
 
 button:active {
-  background-color: #1c6d86;
+  background-color: #396c7c;
   outline: none;
 }
 
 .modal {
-  display: block;
+  display: none;
   position: relative;
   position: fixed;
   z-index: 1;
@@ -147,8 +143,7 @@ button:active {
   background-color: #fff;
   margin: 15% auto;
   padding: 20px;
-  -webkit-box-shadow: 0 0 20px #000;
-          box-shadow: 0 0 20px #000;
+  box-shadow: 0 0 20px #000;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -164,5 +159,26 @@ button:active {
   top: 50px;
   right: 50px;
   cursor: pointer;
+}
+
+.third {
+  padding: 20px;
+}
+
+.wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: #5299af;
+}
+
+.move {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #417b8d;
+  width: 50px;
+  height: 50px;
+  transition: all 2s ease-in;
 }
 /*# sourceMappingURL=style.css.map */
