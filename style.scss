@@ -205,3 +205,26 @@ button {
     height: 50px;
     transition: all 2s ease-in; 
 }
+
+.carousel {
+    padding: 20px 0;
+}
+
+.slides__img {
+    width: 100%;
+}
+
+.slide-nav {
+    display: block;
+    position: relative;
+}
+
+.prev {
+display: inline-block;
+position: absolute;
+}
+
+.next {
+    display: inline-block;
+    position: absolute;
+}
