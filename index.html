@@ -107,26 +107,31 @@
             </div>
         </section>
         <section class="carousel">
-            <div class="slideshow_container">
+            <div class="slideshow">
                 <div class="slide fade">
-                    <div class="slides__pagenumber"></div>
-                    <img src="/img/1.JPG" alt="Слайд" class="slides__img">
-                    <div class="slides__text">Текст</div>
+                    <div class="slide__pagenumber"></div>
+                    <img src="/img/1.JPG" alt="Слайд" class="slide__img">
+                    <div class="slide__text">база Дрофа помойка 1</div>
                 </div>
                 <div class="slide fade">
-                    <div class="slides__pagenumber"></div>
-                    <img src="/img/2.JPG" alt="Слайд" class="slides__img">
-                    <div class="slides__text">Текст</div>
+                    <div class="slide__pagenumber"></div>
+                    <img src="/img/2.JPG" alt="Слайд" class="slide__img">
+                    <div class="slide__text">база Дрофа помойка 2</div>
                 </div>
                 <div class="slide fade">
-                    <div class="slides__pagenumber"></div>
-                    <img src="/img/3.JPG" alt="Слайд" class="slides__img">
-                    <div class="slides__text">Текст</div>
+                    <div class="slide__pagenumber"></div>
+                    <img src="/img/3.JPG" alt="Слайд" class="slide__img">
+                    <div class="slide__text">база Дрофа помойка 3</div>
+                </div>
+                <div class="slideshow-nav">
+                    <button class="slideshow__prev" onclick="plusSlide(-1)">&laquo;</button>
+                    <button class="slideshow__next" onclick="plusSlide(1)">&raquo;</button>
                 </div>
             </div>
-            <div class="slide-nav">
-                <button class="prev" onclick="slidernav(-1)">*#10094</a>
-                <button class="next" onclick="slidernav(1)">*#10095</a>
+            <div class="slideshow-dots">
+                <span class="slideshow-dots__item dot" onclick="currentSlide(1)"></span>
+                <span class="slideshow-dots__item dot" onclick="currentSlide(2)"></span>
+                <span class="slideshow-dots__item dot" onclick="currentSlide(3)"></span>
             </div>
         </section>
     </div>

@@ -45,7 +45,7 @@ function hideTabsContent(a) {
         tabContent[i].classList.remove('show');
         tabContent[i].classList.add('hide');
         tab[i].classList.remove('whiteborder');
-        
+
     }
 }
 
@@ -77,12 +77,12 @@ var btn = document.getElementById('mybtn');
 var span = document.getElementsByClassName('close')[0];
 
 //при клике на btn - отображаем модальное окно
-btn.onclick = function() {
+btn.onclick = function () {
     modal.style.display = 'block';
 }
 
 //при клике на кнопку close - открываем модальное окно
-span.onclick = function() {
+span.onclick = function () {
     modal.style.display = 'none';
 }
 
@@ -97,6 +97,54 @@ var abtn = document.getElementById('anim_button');
 
 abtn.onclick = function () {
     var move = document.getElementsByClassName('move')[0];
-    move.style.top = 250 +'px';
-    move.style.left = 250 +'px';
+    move.style.top = 250 + 'px';
+    move.style.left = 250 + 'px';
+}
+
+//-----------------------СЛАЙДЕР--------------------------------------------------------
+
+var slideIndex = 1; //задаем номер начального слайда
+showSlides(slideIndex); //вызываем функцию ShowSlides
+
+//переключение слайдов вперед и назад
+function plusSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+//функция для клика по DOT
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+//функция showSlides
+function showSlides(n) {
+    var i = n;
+    var slides = document.getElementsByClassName('slide'); //получаем элементы slide
+    var dots = document.getElementsByClassName('dot'); //получаем элементы dot
+
+    //TODO:
+    //Если дошли до последнего слайда
+    if (n > slides.length) {
+        slideIndex = 1; //...то крутим на 1-й слайд
+    }
+
+    //Если дошли до первого слайда
+    if (n < 1) {
+        slideIndex = slides.length; //...то крутим на последний слайд
+    }
+
+    //сначала скрываем все слайды и dots
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+        dots[i].classList.remove('active');
+    }
+
+    //p
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace('active ', ''); //...убираем active у точки
+    }
+
+    slides[slideIndex - 1].style.display = 'block';
+    dots[slideIndex - 1].classList.add('active');
+
 }
