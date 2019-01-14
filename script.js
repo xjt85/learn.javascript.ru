@@ -148,3 +148,13 @@ function showSlides(n) {
     dots[slideIndex - 1].classList.add('active');
 
 }
+
+//--------------------------------------ФИЛЬТР-------------------------------------------------------
+
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myinput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById('mylist');
+    li = ul.getElementsByTagName('li');
+}
