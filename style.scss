@@ -139,6 +139,7 @@ button {
     }
 }
 
+//---------------------------МОДАЛЬНОЕ ОКНО-----------------------------------
 
 .modal {
     display: none;
@@ -178,6 +179,8 @@ button {
     right: 50px;
     cursor: pointer;
 }
+
+//---------------------------СЛАЙДЕР-КАРУСЕЛЬ-----------------------------------
 
 .third {
     border-top: 1px solid $accent-blue;
@@ -294,5 +297,46 @@ button {
 
     to {
         opacity: 1;
+    }
+}
+
+//---------------------------ФИЛЬТРУЮЩИЙСЯ СПИСОК-----------------------------------
+
+.filter {
+    padding: 20px;
+
+    form {
+        width: calc(100% - 20px);
+        margin: 0;
+        margin-bottom: 12px;
+    }
+}
+
+.myinput {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 5px;
+    border: 1px solid #ddd;
+}
+
+.mylist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    .header {
+        background-color: rgb(187, 187, 187);
+    }
+    
+    a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        border: 1px solid #ddd;
+        font-size: 18px;
+        cursor: default;
+        &:hover:not(.header) {
+            background-color: rgb(214, 214, 214);
+        }
     }
 }
