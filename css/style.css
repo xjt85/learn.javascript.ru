@@ -23,6 +23,8 @@ body {
 }
 
 .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin: 0;
@@ -63,6 +65,7 @@ body {
   overflow: hidden;
   height: 0;
   opacity: 0;
+  -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
   list-style: none;
 }
@@ -73,7 +76,8 @@ body {
   background-color: #ddd;
   border-radius: 10px 10px 0 0;
   cursor: pointer;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .tab:hover {
@@ -143,7 +147,8 @@ button:active {
   background-color: #fff;
   margin: 15% auto;
   padding: 20px;
-  box-shadow: 0 0 20px #000;
+  -webkit-box-shadow: 0 0 20px #000;
+          box-shadow: 0 0 20px #000;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -165,9 +170,14 @@ button:active {
   border-top: 1px solid #417b8d;
   border-bottom: 1px solid #417b8d;
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .wrapper {
@@ -176,6 +186,8 @@ button:active {
   width: 300px;
   height: 300px;
   background-color: #5299af;
+  -webkit-box-shadow: 0 0 40px #979797;
+          box-shadow: 0 0 40px #979797;
 }
 
 .move {
@@ -185,6 +197,7 @@ button:active {
   background-color: red;
   width: 50px;
   height: 50px;
+  -webkit-transition: all 2s ease-in;
   transition: all 2s ease-in;
 }
 
@@ -265,7 +278,17 @@ button:active {
 }
 
 .slide.fade {
-  animation: fade 1.5s;
+  -webkit-animation: fade 1.5s;
+          animation: fade 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
@@ -315,5 +338,45 @@ button:active {
 
 .mylist a:hover:not(.header) {
   background-color: #d6d6d6;
+}
+
+.calc {
+  padding: 20px;
+  text-align: center;
+}
+
+.calc-form {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 40px #979797;
+          box-shadow: 0 0 40px #979797;
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: #ffccb5;
+  width: 300px;
+  padding: 20px;
+}
+
+.calc-form__label {
+  display: inline-block;
+  width: 30%;
+}
+
+.calc-form__input {
+  display: inline-block;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  width: calc(45% - 20px);
+  margin-bottom: 20px;
+}
+
+.calc-form button {
+  display: inline-block;
+  padding: 11px 5px;
+  margin: 0;
+  margin-right: 10px;
+  font-size: 30px;
+  width: calc(25% - 16px);
 }
 /*# sourceMappingURL=style.css.map */

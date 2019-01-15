@@ -151,7 +151,7 @@ function showSlides(n) {
 
 //--------------------------------------ФИЛЬТР-------------------------------------------------------
 
-function myFunction() {
+function myFilter() {
     var input, filter, ul, li, a, i;
     input = document.getElementById('myinput');
     filter = input.value.toUpperCase();
@@ -165,10 +165,4 @@ function myFunction() {
             a.style.display = 'none';
         }
     }
-
-
-
-
-
-
 }
