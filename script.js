@@ -157,4 +157,18 @@ function myFunction() {
     filter = input.value.toUpperCase();
     ul = document.getElementById('mylist');
     li = ul.getElementsByTagName('li');
+    for (let i = 0; i < li.length; i++) {
+        const a = li[i].getElementsByTagName('a')[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a.style.display = '';
+        } else {
+            a.style.display = 'none';
+        }
+    }
+
+
+
+
+
+
 }
