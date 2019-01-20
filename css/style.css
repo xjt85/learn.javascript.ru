@@ -17,8 +17,7 @@ body {
   min-height: 600px;
 }
 
-.first,
-.second {
+section {
   padding: 20px;
 }
 
@@ -378,5 +377,190 @@ button:active {
   margin-right: 10px;
   font-size: 30px;
   width: calc(25% - 16px);
+}
+
+.map-section {
+  padding: 20px;
+  width: 100%;
+}
+
+#map {
+  width: calc(100% - 40px);
+  height: 400px;
+}
+
+.modal-img1 {
+  width: 200px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modal-img1:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.modal__close:hover {
+  color: #bbbbbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal__content {
+  display: block;
+  margin: 80px auto 16px;
+  width: 80%;
+  max-width: 700px;
+}
+
+.modal__descr {
+  margin: 0 auto;
+  width: 80%;
+  height: 150px;
+  max-width: 700px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.modal__content, .modal__descr {
+  -webkit-animation: zoom 0.6s;
+          animation: zoom 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .modal__content {
+    width: 100%;
+  }
+}
+
+.myprogress {
+  position: relative;
+  width: 150px;
+  height: 30px;
+  background-color: #ddd;
+}
+
+.myprogress__bar {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background-color: #4caf50;
+}
+
+.myprogress__label {
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+}
+
+.popup {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  background-color: #e44141;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.popup__text {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  width: 160px;
+  background-color: #555;
+  text-align: center;
+  padding: 8px 0;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  margin-left: 80px;
+  bottom: 125%;
+  left: 50%;
+}
+
+.popup__text::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: #555;
+  top: 100%;
+  left: 50%;
+}
+
+.popup__text.show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+}
+
+@-webkit-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

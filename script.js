@@ -93,6 +93,8 @@ window.onclick = function (event) {
     }
 }
 
+//---------------------------------АНИМАЦИЯ---------------------------------------------
+
 var abtn = document.getElementById('anim_button');
 
 abtn.onclick = function () {
@@ -165,4 +167,70 @@ function myFilter() {
             a.style.display = 'none';
         }
     }
+}
+
+//-------------------------------Google карта------------------------------------------------
+
+function initMap() {
+    // The location of Uluru
+    var uluru = {
+        lat: 48,
+        lng: 135
+    };
+    // The map, centered at Uluru
+    var map = new google.maps.Map(
+        document.getElementById('map'), {
+            zoom: 4,
+            center: uluru
+        });
+    // The marker, positioned at Uluru
+    var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+    });
+}
+
+//-------------------------------Модальные картинки------------------------------------------------
+
+var modal = document.getElementById('modal');
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById('modal__img');
+var captionText = document.getElementById('caption');
+
+img.onclick = function () {
+    modal.style.display = 'block';
+    modalImg.src = this.src;
+    captionText = this.alt;
+}
+
+var span = document.getElementsByClassName('modal__close')[0];
+
+span.onclick = function () {
+    modal.style.display = 'none';
+
+}
+
+//---------------------------13. ПРОГРЕСС-БАР---------------------------------------------------
+
+function move() {
+    var elem = document.getElementById('mybar');
+    var width = 10;
+    var id = setInterval(frame, 10);
+    
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+        } else {
+            width++;
+            elem.style.width = width + '%';
+            document.getElementById('label').innerHTML = width + '%';
+        }
+    }
+}
+
+//---------------------------14. POPUP---------------------------------------------------------
+
+function myPopup() {
+    var popup = document.getElementById('popup__text');
+    popup.classList.toggle('show');
 }

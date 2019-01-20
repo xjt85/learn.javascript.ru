@@ -153,18 +153,43 @@
             </ul>
         </section>
         <section class="calc">
-            <form action="" class="calc-form">
+            <div class="calc-form">
                 <label for="first" class="calc-form__label">Число2: </label><input type="text" name="second" class="calc-form__input">
                 <label for="second" class="calc-form__label">Число1: </label><input type="text" name="first" class="calc-form__input calc-form__input_sec">
                 <button class="plus">+</button>
                 <button class="minus">-</button>
                 <button class="multiply">*</button>
                 <button class="divide">/</button>
-            </form>
+            </div>
+        </section>
+        <section class="map-section">
+            <div id="map"></div>
+        </section>
+        <section class="modal-s">
+            <img src="img/bannerx.jpg" alt="картинка" id="myImg" class="modal-img1">
+            <div class="modal" id="modal">
+                <span class="modal__close" onclick="document.getElementById('modal-img1').style.display = 'none'">&times;</span>
+                <img class="modal__content" id="modal__img">
+                <div class="modal__descr">Описание</div>
+            </div>
+        </section>
+        <section>
+            <div id="myprogress" class="myprogress">
+                <div id="mybar" class="myprogress__bar">
+                    <div id="label" class="myprogress__label">10%</div>
+                </div>
+            </div>
+            <br>
+            <button onclick="move()">Включить</button>
+        </section>
+        <section class="popup-s">
+            <div class="popup" id="mypopup" onclick="myPopup()">Click me!
+                <span class="popup__text" id="popup__text">Lorem ipsum dolor sit amet consectetur.</span>
+             </div>
         </section>
     </div>
-    <script src="script.js">
-    </script>
+    <script src="script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMBK8E8vyxYKp0nv5-eReUD0QmQeI0K2Y&callback=initMap"></script>
 </body>
 
 </html>
