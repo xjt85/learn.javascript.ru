@@ -23,6 +23,8 @@ body {
 
 section {
     padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
 }
 
 .menu {
@@ -384,6 +386,8 @@ button {
 
 }
 
+//---------------------------РАБОТА С API GOOGLE MAPS--------------------------------------
+
 .map-section {
     padding: 20px;
     width: 100%;
@@ -546,7 +550,7 @@ button {
 
 }
 
-@keyframes {
+@keyframes fadeIn {
     from {
         opacity: 0;
     }
@@ -558,7 +562,7 @@ button {
 
 //--------------------------15.ACCORDION--------------------------------
 
-.accordion-button {
+.accordion_button {
     margin: 0;
     width: 100%;
     background-color: #eee;
@@ -569,6 +573,7 @@ button {
     border: none;
     // outline: none;
     transition: 0.2s;
+
     &.active,
     &:hover {
         background-color: #ddd;
@@ -579,7 +584,28 @@ button {
     padding: 0 18px;
     background-color: #ffffff;
     display: none;
+
     &.show {
         display: block;
+        animation: acc 2s;
     }
 }
+
+@keyframes acc {
+    0% {
+        height: 0%;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+        height: 50%;
+    }
+
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+//----------------------------17. TODO Application---------------------------------

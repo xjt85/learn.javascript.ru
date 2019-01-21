@@ -237,13 +237,22 @@ function myPopup() {
 
 //----------------------------15. АККОРДЕОН---------------------------------
 
-var acc = getElementsByClassName('accordion-button');
+var acc = document.getElementsByClassName('accordion_button');
 var i;
 
 for (i = 0; i < acc.length; i++) {
     acc[i].onclick = function () {
         this.classList.toggle('active');
-        this.nextElementSibling.toggle('show');
+        this.nextElementSibling.classList.toggle('show');
     };
-
+    
 }
+
+//----------------------------16. КОНВЕРТЕР ВАЛЮТ---------------------------------
+
+function curConv(inpval) {
+    document.getElementById('cur_output').innerHTML = inpval * 60; //вывод
+    
+}
+
+//----------------------------17. TODO Application---------------------------------

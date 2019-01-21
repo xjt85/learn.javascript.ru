@@ -188,22 +188,46 @@
             </div>
         </section>
         <section class="accordion-s">
-            <button class="accordion-button">Section1</button>
+            <button class="accordion_button">Section1</button>
             <div class="panel">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, ad?</p>
             </div>
-            <button class="accordion-button">Section2</button>
+            <button class="accordion_button">Section2</button>
             <div class="panel">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, ad?</p>
             </div>
-            <button class="accordion-button">Section3</button>
+            <button class="accordion_button">Section3</button>
             <div class="panel">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, ad?</p>
             </div>
-            <button class="accordion-button">Section4</button>
+            <button class="accordion_button">Section4</button>
             <div class="panel">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, ad?</p>
             </div>
+        </section>
+        <section class="todolist-s">
+            <h2>Money</h2>
+            <p>
+                <label for="">$</label>
+                <input type="text" id="inputCurr" oninput="curConv(this.value)" placeholder="$">
+            </p>
+            <p><span id="cur_output"></span>Rub</p>
+        </section>
+        <section class="todoapp-s">
+            <div class="inp">
+                <h2 class="inp__h2">My todo list</h2>
+                <input type="text" id="input_task" placeholder="..." class="inp__input">
+                <button class="inp__button">Add</button>
+            </div>
+            <ul class="todolist">
+                <li class="todolist__li">Купить посуду</li>
+                <li class="todolist__li">Попылесосить</li>
+                <li class="todolist__li">Отправить отчет</li>
+                <li class="todolist__li">Подключить комп</li>
+                <li class="todolist__li">Поменять масло</li>
+                <li class="todolist__li">Отметить высоту</li>
+            </ul>
+
         </section>
     </div>
     <script src="script.js"></script>
