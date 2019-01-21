@@ -216,7 +216,7 @@ function move() {
     var elem = document.getElementById('mybar');
     var width = 10;
     var id = setInterval(frame, 10);
-    
+
     function frame() {
         if (width >= 100) {
             clearInterval(id);
@@ -233,4 +233,17 @@ function move() {
 function myPopup() {
     var popup = document.getElementById('popup__text');
     popup.classList.toggle('show');
+}
+
+//----------------------------15. АККОРДЕОН---------------------------------
+
+var acc = getElementsByClassName('accordion-button');
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function () {
+        this.classList.toggle('active');
+        this.nextElementSibling.toggle('show');
+    };
+
 }

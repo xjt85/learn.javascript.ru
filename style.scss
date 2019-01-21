@@ -516,6 +516,7 @@ button {
         visibility: hidden;
         z-index: 1;
         width: 160px;
+        height: 40px;
         background-color: #555;
         text-align: center;
         padding: 8px 0;
@@ -552,5 +553,33 @@ button {
 
     to {
         opacity: 1;
+    }
+}
+
+//--------------------------15.ACCORDION--------------------------------
+
+.accordion-button {
+    margin: 0;
+    width: 100%;
+    background-color: #eee;
+    border-radius: 0;
+    color: #444;
+    padding: 18px;
+    text-align-last: left;
+    border: none;
+    // outline: none;
+    transition: 0.2s;
+    &.active,
+    &:hover {
+        background-color: #ddd;
+    }
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: #ffffff;
+    display: none;
+    &.show {
+        display: block;
     }
 }
