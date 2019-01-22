@@ -1,5 +1,9 @@
 $accent-blue: rgb(65, 123, 141);
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     color: #fff;
 }
@@ -23,7 +27,6 @@ body {
 
 section {
     padding: 20px;
-    box-sizing: border-box;
     border: 1px solid #ccc;
 }
 
@@ -609,3 +612,19 @@ button {
 }
 
 //----------------------------17. TODO Application---------------------------------
+
+.newtask {
+    background-color: red;
+    &__h2 {
+        background-color: transparent;
+        display: block;
+        text-align: center;
+        font-size: 30px;
+        color: #ffffff;
+}
+
+.todolist {
+    &__li {
+        display: inline-block;
+    }
+}
