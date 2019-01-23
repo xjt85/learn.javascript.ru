@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -27,6 +28,8 @@ section {
 }
 
 .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin: 0;
@@ -67,6 +70,7 @@ section {
   overflow: hidden;
   height: 0;
   opacity: 0;
+  -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
   list-style: none;
 }
@@ -77,7 +81,8 @@ section {
   background-color: #ddd;
   border-radius: 10px 10px 0 0;
   cursor: pointer;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .tab:hover {
@@ -147,7 +152,8 @@ button:active {
   background-color: #fff;
   margin: 15% auto;
   padding: 20px;
-  box-shadow: 0 0 20px #000;
+  -webkit-box-shadow: 0 0 20px #000;
+          box-shadow: 0 0 20px #000;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -169,9 +175,14 @@ button:active {
   border-top: 1px solid #417b8d;
   border-bottom: 1px solid #417b8d;
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .wrapper {
@@ -180,7 +191,8 @@ button:active {
   width: 300px;
   height: 300px;
   background-color: #5299af;
-  box-shadow: 0 0 40px #979797;
+  -webkit-box-shadow: 0 0 40px #979797;
+          box-shadow: 0 0 40px #979797;
 }
 
 .move {
@@ -190,6 +202,7 @@ button:active {
   background-color: red;
   width: 50px;
   height: 50px;
+  -webkit-transition: all 2s ease-in;
   transition: all 2s ease-in;
 }
 
@@ -270,7 +283,17 @@ button:active {
 }
 
 .slide.fade {
-  animation: fade 1.5s;
+  -webkit-animation: fade 1.5s;
+          animation: fade 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
@@ -329,7 +352,8 @@ button:active {
 
 .calc-form {
   display: inline-block;
-  box-shadow: 0 0 40px #979797;
+  -webkit-box-shadow: 0 0 40px #979797;
+          box-shadow: 0 0 40px #979797;
   text-align: center;
   border: 1px solid grey;
   border-radius: 5px;
@@ -401,6 +425,7 @@ button:active {
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -431,15 +456,29 @@ button:active {
 }
 
 .modal__content, .modal__descr {
-  animation: zoom 0.6s;
+  -webkit-animation: zoom 0.6s;
+          animation: zoom 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 @keyframes zoom {
   from {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   to {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -510,7 +549,17 @@ button:active {
 
 .popup__text.show {
   visibility: visible;
-  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
@@ -531,6 +580,7 @@ button:active {
   padding: 18px;
   text-align-last: left;
   border: none;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -546,7 +596,23 @@ button:active {
 
 .panel.show {
   display: block;
-  animation: acc 2s;
+  -webkit-animation: acc 2s;
+          animation: acc 2s;
+}
+
+@-webkit-keyframes acc {
+  0% {
+    height: 0%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+    height: 50%;
+  }
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
 }
 
 @keyframes acc {
@@ -565,13 +631,14 @@ button:active {
 }
 
 .todoapp-s {
-  padding: 0;
+  padding: 20px 0;
 }
 
 .newtask {
   padding: 20px;
   background-color: red;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .newtask__h2 {
@@ -584,19 +651,26 @@ button:active {
   color: #ffffff;
 }
 
-.newtask__input {
-  width: calc(80% - 30px);
-  margin-right: 20px;
-  padding: 5px 15px;
-  border-radius: 5px;
+.newtask__h2::after {
+  display: table;
+  content: '';
+  clear: both;
 }
 
-.newtask button {
-  border-radius: 5px;
-  padding: 5px 25px;
-  background-color: #fff;
-  color: #000000;
-  margin-bottom: 0;
+.newtask__input {
+  width: calc(80% - 30px);
+  padding: 5px 15px;
+  float: left;
+}
+
+.newtask__button {
+  float: left;
+  border: none;
+  outline: none;
+  border-radius: 0px;
+  padding: 4px 35px;
+  background-color: #4e4e4e;
+  color: #ffffff;
 }
 
 .todolist {
@@ -606,7 +680,7 @@ button:active {
 
 .todolist__li {
   position: relative;
-  padding: 5px 10px;
+  padding: 8px 45px;
   list-style: none;
   background-color: #c7c7c7;
   cursor: pointer;
@@ -635,5 +709,22 @@ button:active {
   background-color: #fff;
   color: #244cff;
   font-size: 22px;
+}
+
+.todolist__li.checked {
+  color: #ffffff;
+  text-decoration: line-through;
+  background-color: #888;
+}
+
+.todolist__li.checked::after {
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 15px;
+  z-index: 1;
+  content: '\2714';
+  color: red;
+  font-size: 25px;
 }
 /*# sourceMappingURL=style.css.map */
