@@ -613,18 +613,74 @@ button {
 
 //----------------------------17. TODO Application---------------------------------
 
+.todoapp-s {
+    padding: 0;
+}
+
 .newtask {
+    padding: 20px;
     background-color: red;
+    margin-bottom: 20px;
+
     &__h2 {
+        margin: 0;
+        margin-bottom: 30px;
         background-color: transparent;
         display: block;
         text-align: center;
         font-size: 30px;
         color: #ffffff;
+    }
+
+    &__input {
+        width: calc(80% - 30px);
+        margin-right: 20px;
+        padding: 5px 15px;
+        border-radius: 5px;
+    }
+
+    button {
+        border-radius: 5px;
+        padding: 5px 25px;
+        background-color: #fff;
+        color: #000000;
+        margin-bottom: 0;
+    }
 }
 
 .todolist {
+    margin: 0;
+    padding: 0;
+
     &__li {
-        display: inline-block;
+        position: relative;
+        padding: 5px 10px;
+        list-style: none;
+        background-color: rgb(199, 199, 199);
+        cursor: pointer;
+
+        &:nth-child(odd) {
+            background-color: rgb(168, 168, 168);
+        }
+
+        &:hover {
+            background-color: rgb(138, 138, 138);
+        }
+
+        &::after {
+            position: absolute;
+            z-index: 99;
+            top: 0;
+            right: 10px;
+            display: block;
+            content: '\2716';
+            color: red;
+            font-size: 20px;
+            &:hover {
+                background-color: #fff;
+                color: rgb(36, 76, 255);
+                font-size: 22px;
+            }
+        }
     }
 }
